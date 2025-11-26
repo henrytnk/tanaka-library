@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "node --watch src/index.js",
     "start": "node src/index.js",
+    "prisma": "npx prisma dev",
     "prisma:studio": "npx prisma studio",
     "prisma:generate": "npx prisma generate",
     "prisma:migrate": "npx prisma migrate dev"
