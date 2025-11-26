@@ -12,7 +12,7 @@ This guide walks you through building the Next.js frontend that will display you
 
 ### 1.1 Create Frontend Directory
 ```bash
-cd /Users/shigeo/Personal/tanakalibrary
+cd /Users/shigeo/Personal/tanaka-library
 npx create-next-app@latest frontend
 ```
 

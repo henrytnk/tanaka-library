@@ -86,7 +86,7 @@ GET http://localhost:3001/api/books 404 (Not Found)
 #### Update package.json
 ```json
 {
-  "name": "tanakalibrary-backend",
+  "name": "tanaka-library-backend",
   "version": "1.0.0",
   "engines": {
     "node": ">=18.0.0"
@@ -104,7 +104,7 @@ GET http://localhost:3001/api/books 404 (Not Found)
 ```yaml
 services:
   - type: web
-    name: tanakalibrary-api
+    name: tanaka-library-api
     env: node
     buildCommand: npm install && npx prisma generate
     startCommand: npm start
@@ -129,7 +129,7 @@ services:
    - Select the repository
 
 3. **Configure Service**:
-   - **Name**: `tanakalibrary-api`
+   - **Name**: `tanaka-library-api`
    - **Region**: Choose closest to you
    - **Branch**: `main`
    - **Root Directory**: `backend` (if monorepo)
@@ -156,7 +156,7 @@ services:
 
 6. **Your API URL**:
    ```
-   https://tanakalibrary-api.onrender.com
+   https://tanaka-library-api.onrender.com
    ```
 
 ### 2.3 Run Database Migrations on Production
@@ -179,10 +179,10 @@ npm install && npx prisma generate && npx prisma migrate deploy
 
 ```bash
 # Health check
-curl https://tanakalibrary-api.onrender.com/
+curl https://tanaka-library-api.onrender.com/
 
 # Get books
-curl https://tanakalibrary-api.onrender.com/api/books
+curl https://tanaka-library-api.onrender.com/api/books
 ```
 
 ### 2.5 Keep Free Instance Awake (Optional)
@@ -192,7 +192,7 @@ Render free tier sleeps after 15 minutes of inactivity. Use UptimeRobot:
 1. Sign up: https://uptimerobot.com
 2. Add monitor:
    - **Type**: HTTP(s)
-   - **URL**: `https://tanakalibrary-api.onrender.com/`
+   - **URL**: `https://tanaka-library-api.onrender.com/`
    - **Interval**: 5 minutes
 3. This pings your API every 5 minutes to keep it warm
 
@@ -203,7 +203,7 @@ Render free tier sleeps after 15 minutes of inactivity. Use UptimeRobot:
 #### Update .env.local to .env.production
 Create `frontend/.env.production`:
 ```env
-NEXT_PUBLIC_API_URL=https://tanakalibrary-api.onrender.com
+NEXT_PUBLIC_API_URL=https://tanaka-library-api.onrender.com
 NEXT_PUBLIC_SITE_NAME="Tanaka Library"
 ```
 
@@ -227,7 +227,7 @@ NEXT_PUBLIC_SITE_NAME="Tanaka Library"
 4. **Environment Variables**:
    Click "Environment Variables":
    ```
-   NEXT_PUBLIC_API_URL = https://tanakalibrary-api.onrender.com
+   NEXT_PUBLIC_API_URL = https://tanaka-library-api.onrender.com
    NEXT_PUBLIC_SITE_NAME = Tanaka Library
    ```
 
@@ -238,7 +238,7 @@ NEXT_PUBLIC_SITE_NAME="Tanaka Library"
 
 6. **Your Site URL**:
    ```
-   https://tanakalibrary.vercel.app
+   https://tanaka-library.vercel.app
    ```
 
 ### 3.3 Update Backend CORS
@@ -247,7 +247,7 @@ After deploying frontend, update backend CORS:
 
 In Render dashboard → Environment:
 ```env
-FRONTEND_URL=https://tanakalibrary.vercel.app
+FRONTEND_URL=https://tanaka-library.vercel.app
 ```
 
 Or if using custom domain:
@@ -259,7 +259,7 @@ Redeploy backend for changes to take effect.
 
 ### 3.4 Test Production Site
 
-Visit `https://tanakalibrary.vercel.app` and:
+Visit `https://tanaka-library.vercel.app` and:
 - ✅ Home page loads
 - ✅ Books are displayed
 - ✅ Click on a book to see details
@@ -326,7 +326,7 @@ Configuration:
    - Add CNAME record:
      - **Type**: CNAME
      - **Name**: api
-     - **Target**: tanakalibrary-api.onrender.com (from Render)
+     - **Target**: tanaka-library-api.onrender.com (from Render)
      - **Proxy status**: DNS only (gray cloud)
      - **TTL**: Auto
 
@@ -464,7 +464,7 @@ git push origin main
 
 Every pull request gets a preview URL:
 ```
-https://tanakalibrary-git-feature-branch.vercel.app
+https://tanaka-library-git-feature-branch.vercel.app
 ```
 
 Use for testing before merging to main.

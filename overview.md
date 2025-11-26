@@ -60,7 +60,7 @@ A personal library website where you can:
 **Recommended: Monorepo approach** (single GitHub repo with two folders)
 
 ```
-tanakalibrary/
+tanaka-library/
 ├── README.md
 ├── .gitignore
 ├── frontend/              # Next.js app

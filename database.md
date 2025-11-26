@@ -18,7 +18,7 @@ This guide walks you through setting up your PostgreSQL database with Supabase a
 ### 1.2 Create New Project
 1. Click "New Project"
 2. Fill in the details:
-   - **Name**: `tanakalibrary` (or your choice)
+   - **Name**: `tanaka-library` (or your choice)
    - **Database Password**: Generate a strong password (SAVE THIS!)
    - **Region**: Choose closest to you (e.g., us-east-1, eu-west-1)
    - **Pricing Plan**: Free tier
@@ -41,7 +41,7 @@ This guide walks you through setting up your PostgreSQL database with Supabase a
 
 ### 2.1 Navigate to Backend Directory
 ```bash
-cd /Users/shigeo/Personal/tanakalibrary/backend
+cd /Users/shigeo/Personal/tanaka-library/backend
 ```
 
 ### 2.2 Install Prisma

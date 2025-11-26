@@ -12,7 +12,7 @@ This guide walks you through building the Express backend that will serve both t
 
 ### 1.1 Create Backend Directory
 ```bash
-cd /Users/shigeo/Personal/tanakalibrary
+cd /Users/shigeo/Personal/tanaka-library
 mkdir backend
 cd backend
 ```
@@ -59,7 +59,7 @@ npm install -D nodemon
 ### 1.4 Update package.json Scripts
 ```json
 {
-  "name": "tanakalibrary-backend",
+  "name": "tanaka-library-backend",
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
