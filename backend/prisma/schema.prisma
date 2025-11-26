@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  id        String    @id @default(uuid())
+  title     String
+  author    String
+  coverUrl  String?
+  tags      String[]  @default([])
+  review    Review?
+  rating    Int?      @db.SmallInt
+  releasedYear Int?
+  startedReadingAt  DateTime?
+  finishedReadingAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([createdAt])
+  @@map("books")
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  book      Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  bookId    String   @unique
+  title     String
+  body      String
+  rating    Int      @db.SmallInt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([createdAt])
+  @@map("reviews")
+}
+
+model AdminUser {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("admin_users")
+}
