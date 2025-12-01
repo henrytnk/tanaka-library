@@ -5,10 +5,10 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "node --watch src/index.js",
-    "start": "node src/index.js",
+    "dev": "node --watch src/index.ts",
+    "start": "node src/index.ts",
     "prisma": "npx prisma dev",
     "prisma:studio": "npx prisma studio",
     "prisma:generate": "npx prisma generate",
@@ -21,6 +21,8 @@
   "dependencies": {
     "@prisma/adapter-pg": "^7.0.1",
     "@prisma/client": "^6.19.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.1",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
@@ -29,7 +31,9 @@
     "express-session": "^1.18.2",
     "express-validator": "^7.3.1",
     "helmet": "^8.1.0",
-    "multer": "^2.0.2"
+    "multer": "^2.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "prisma": "^6.19.0"
